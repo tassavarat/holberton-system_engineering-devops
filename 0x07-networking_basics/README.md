@@ -65,9 +65,9 @@ If we continue the comparison of a network device to your house, where IP addres
 
 While the full list of ports should not be memorized, it is important to know the most used ports, let’s start by remembering 3 of them:
 
-__22__ for SSH
-__80__ for HTTP
-__443__ for HTTPS
+* __22__ for SSH
+* __80__ for HTTP
+* __443__ for HTTPS
 Note that a specific IP + port = socket.
 
 Write a Bash script that displays listening ports:

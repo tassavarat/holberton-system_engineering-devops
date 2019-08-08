@@ -14,9 +14,9 @@
 ---
 
 ### [0. Give me a page!](./0-give_me_a_page)
-Be sure to read the ![Docker concept page](https://intranet.hbtn.io/rltoken/gv22Vt6AFpKaDwiVtdGgBA).
+Be sure to read the [Docker concept page](https://intranet.hbtn.io/rltoken/gv22Vt6AFpKaDwiVtdGgBA).
 
-In this first debugging project, you will need to get ![Apache](https://intranet.hbtn.io/rltoken/B4vOap4dPNKxdZzBbepK7Q) to run on the container and to return a page containing `Hello Holberton` when querying the root of it.
+In this first debugging project, you will need to get [Apache](https://intranet.hbtn.io/rltoken/B4vOap4dPNKxdZzBbepK7Q) to run on the container and to return a page containing `Hello Holberton` when querying the root of it.
 
 Example:
 

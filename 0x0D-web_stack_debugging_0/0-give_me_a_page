@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Debugs Apache in provided container
 
-service apache2 restart
+sudo service apache2 restart

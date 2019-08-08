@@ -8,7 +8,7 @@ file { '/var/www/html/index.html':
   content => 'Holberton School',
 }
 
-fine_line { 'Add redirection, 301':
+file_line { 'Add redirection, 301':
   path   => '/etc/nginx/sites-available/default',
   ensure => 'present',
   after  => 'listen 80 default_server',

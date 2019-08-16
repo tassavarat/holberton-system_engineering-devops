@@ -2,7 +2,7 @@
 # Installs and configures HAproxy on server
 
 apt-get -y install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.0
+add-apt-repository -y ppa:vbernat/haproxy-2.0
 apt-get update
 apt-get install haproxy=2.0.\*
 echo "

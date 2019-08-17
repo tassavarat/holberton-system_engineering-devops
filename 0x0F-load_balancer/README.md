@@ -25,6 +25,7 @@ Requirements:
 * Write `0-custom_http_response-header` so that it configures a brand new Ubuntu machine to the requirements asked in this task
 	* [Ignore](https://intranet.hbtn.io/rltoken/3AOvROMUNUrzxEWhli4GTw) [SC2154](https://intranet.hbtn.io/rltoken/i5f8DYX_rRYFz4hfbG_GJg) for `shellcheck`
 Example:
+
 ```
 sylvain@ubuntu$ curl -sI 34.198.248.145 | grep X-Served-By
 X-Served-By: 03-web-01

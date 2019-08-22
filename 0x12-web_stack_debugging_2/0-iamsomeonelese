@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Creates and runs whoami command as specified user
 
-useradd "$1"
 sudo -u "$1" bash -c whoami

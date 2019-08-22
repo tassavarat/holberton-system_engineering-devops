@@ -2,5 +2,4 @@
 # Creates and runs whoami command as specified user
 
 useradd "$1"
-su - "$1" -c whoami
-exit
+sudo -u "$1" bash -c whoami

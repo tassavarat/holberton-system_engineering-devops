@@ -8,9 +8,6 @@ global
         group haproxy
         daemon
 
-        maxconn 2048
-        tune.ssl.default-dh-param 2048
-
         # Default SSL material locations
         ca-base /etc/ssl/certs
         crt-base /etc/ssl/private
@@ -40,19 +37,16 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
         option forwardfor
-        option http-server-close
 
 frontend lb
-        bind 35.227.53.35:80
+        bind 35.196.125.111:80
         mode http
         reqadd X-Forwarded-Proto:\ http
         default_backend servers
 
 frontend www-https
-        bind 35.227.53.35:443 ssl crt /etc/haproxy/certs/tassavarat.tech.pem
+        bind 35.196.125.111:443 ssl crt /etc/haproxy/ssl/tassavarat.tech.pem
         reqadd X-Forwarded-Proto:\ https
-        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
-        use_backend letsencrypt-backend if letsencrypt-acl
         default_backend servers
 
 backend servers
@@ -61,6 +55,3 @@ backend servers
         redirect scheme https if !{ ssl_fc }
         server web-01 35.237.54.178:80 check
         server web-02 35.196.248.176:80 check
-
-backend letsencrypt-backend
-        server letsencrypt 127.0.0.1:54321

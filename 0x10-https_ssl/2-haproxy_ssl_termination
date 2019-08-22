@@ -44,7 +44,7 @@ frontend lb
         default_backend servers
 
 frontend www-https
-        bind *:443 ssl crt /etc/haproxy/ssl/tassavarat.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/tassavarat.tech.pem
         reqadd X-Forwarded-Proto:\ https
         default_backend servers
 

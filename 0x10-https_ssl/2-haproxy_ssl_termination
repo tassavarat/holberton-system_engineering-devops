@@ -40,7 +40,6 @@ defaults
 
 frontend lb
         bind *:80
-        mode http
         reqadd X-Forwarded-Proto:\ http
         default_backend servers
 
@@ -50,7 +49,6 @@ frontend www-https
         default_backend servers
 
 backend servers
-        mode http
         balance roundrobin
         redirect scheme https if !{ ssl_fc }
         server web-01 35.237.54.178:80 check

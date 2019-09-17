@@ -19,7 +19,7 @@
 
 ---
 
-### [0. Install MySQL]
+### 0. Install MySQL
 First things first, let’s get MySQL installed on both your web-01 and web-02 servers.
 
 * MySQL distribution must be 5.7.x
@@ -33,7 +33,7 @@ mysql  Ver 14.14 Distrib 5.7.25, for Linux (x86_64) using  EditLine wrapper
 ubuntu@229-web-01:~$
 ```
 
-### [1. Let us in!]
+### 1. Let us in!
 In order for us to verify that your servers are properly configured, we need you to create a user and password for both MySQL databases which will allow the checker access to them.
 
 * Create a MySQL user named holberton_user on both web-01 and web-02 with the host name set to localhost and the password projectcorrection280hbtn. This will allow us to access the replication status on both servers.
@@ -52,7 +52,7 @@ Enter password:
 ubuntu@229-web-01:~$
 ```
 
-### [2. If only you could see what I've seen with your eyes]
+### 2. If only you could see what I've seen with your eyes
 In order for you to set up replication, you’ll need to have a database with at least one table and one row in your primary MySQL server (web-01) to replicate from.
 
 * Create a database named tyrell_corp.
@@ -70,7 +70,7 @@ Enter password:
 ubuntu@229-web-01:~$
 ```
 
-### [3. Quite an experience to live in fear, isn't it?]
+### 3. Quite an experience to live in fear, isn't it?
 Before you get started with your primary-replica synchronization, you need one more thing in place. On your primary MySQL server (web-01), create a new user for the replica server.
 
 * The name of the new user should be replica_user, with the host name set to %, and can have whatever password you’d like.
@@ -92,7 +92,7 @@ ubuntu@229-web-01:~$ mysql -uholberton_user -p -e 'SELECT user, Repl_slave_priv 
 ubuntu@229-web-01:~$
 ```
 
-### [4. Setup a Primary-Replica infrastructure using MySQL]
+### 4. Setup a Primary-Replica infrastructure using MySQL
 ![Image_0](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/280/FOeOLrP.gif)
 
 Having a replica member on for your MySQL database has 2 advantages:
@@ -203,7 +203,6 @@ mysql>
 ```
 
 ### [5. MySQL backup](./5-mysql_backup)
-![vid_0](https://www.youtube.com/watch?v=ANU-oSE5_hU)
 What if the data center where both your primary and replica database servers are hosted are down because of a power outage or even worse: flooding, fire? Then all your data would inaccessible or lost. That’s why you want to backup and store them in a different system in another physical location. This can be achieved by dumping your MySQL data, compressing them and storing them in a different data center.
 
 Write a Bash script that generates a MySQL dump and creates a compressed archive out of it.

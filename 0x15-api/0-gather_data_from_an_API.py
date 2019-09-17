@@ -4,7 +4,6 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
-    import urllib
 
     NUMBER_OF_DONE_TASKS = 0
     TASK_TITLE = []

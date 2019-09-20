@@ -12,29 +12,12 @@ def recurse(subreddit, hot_list=[], after=""):
                      headers={"User-agent": "custom"})
 
     if r.status_code != 200:
-        # print("status code not 200")
         return None
-    after = r.json().get("data").get("children")[0].get("data").get("name")
-    # print("after is", after)
-    if not r.json().get("data").get("children")[0].get("data").get("name"):
-        # print("in base case")
+    if after is None:
         return hot_list
 
-    hot_list.append(r.json().get("data").get("children")[0].get("data").
-                    get("title"))
-    # print("recursing")
-    recurse(subreddit, hot_list, after)
-    # print("hot_list is", hot_list)
-    return hot_list
+    for i in r.json().get("data").get("children"):
+        hot_list.append(i.get("data").get("title"))
+    after = r.json().get("data").get("after")
 
-
-'''
-    while r.json().get("data").get("children")[0].get("data").get("after"):
-        r = requests.get("https://reddit.com/r/{}/hot.json?after={}".
-                         format(subreddit, r.json().get("data").get("children")[0].get("data").get("name")), headers={"User-agent": "custom"})
-        hot_list.append(r.json().get("data").get("children")[0].get("data").get("title"))
-        print(hot_list)
-    print("####")
-    print(r.json().get("data").get("children")[2].get("data").get("title"))
-    print("####")
-'''
+    return recurse(subreddit, hot_list, after)

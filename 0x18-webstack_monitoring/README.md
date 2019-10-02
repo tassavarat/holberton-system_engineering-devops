@@ -29,7 +29,7 @@ For this task head to [https://www.datadoghq.com/](https://intranet.hbtn.io/rlto
 * Create an application key
 * Create the answer file 0-setup_datadog with your API key on the first line of the file, and your application key on the second
 
-### [1. Monitor some metrics](./1. Monitor some metrics)
+### [1. Monitor some metrics](./0-setup_datadog)
 Among the litany of data your monitoring service can report to you are system metrics. You can use these metrics to determine statistics such as reads/writes per second, which can help your company determine if/how they should scale. Set up some monitors within the Datadog dashboard to monitor and alert you of a few. You can read about the various system metrics that you can monitor here: System Check.
 
 ![img1](https://intranet.hbtn.io/rltoken/naY47nur2yPJNw8tdACnzQ)
@@ -38,7 +38,7 @@ Among the litany of data your monitoring service can report to you are system me
 * Set up a monitor that checks the number of read requests issued to the device per second.
 * Set up a monitor that checks the number of write requests issued to the device per second.
 
-### [2. Create a dashboard](./2. Create a dashboard)
+### [2. Create a dashboard](./2-setup_datadog)
 Now create a dashboard with different metrics displayed in order to get a few different visualizations.
 
 * Create a new dashboard

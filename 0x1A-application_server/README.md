@@ -15,6 +15,8 @@
 * The first line of all your Bash scripts should be exactly #!/usr/bin/env bash
 * The second line of all your Bash scripts should be a comment explaining what is the script doing
 
+---
+
 #### [0. Set up development with Python](./README.md)
 Let’s serve what you built for [AirBnB clone v2 - Web framework on web-01](https://intranet.hbtn.io/rltoken/QpuOAVJIVqCwq-8BAqemXQ). This task is an exercise in setting up your development environment, which is used for testing and debugging your code before deploying it to production.
 

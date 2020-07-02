@@ -21,12 +21,13 @@ def fill_list(subreddit, hot_list=[], after=None):
                        allow_redirects=False)
     if req.status_code != 200:
         return None
+    after = req.json().get("data").get("after")
     if after is None:
         return hot_list
     for i in req.json().get("data").get("children"):
         for word in i.get("data").get("title").split():
             hot_list.append(word.lower())
-    return fill_list(subreddit, hot_list, req.json().get("data").get("after"))
+    return fill_list(subreddit, hot_list, after)
 
 
 def count_words(subreddit, word_list):

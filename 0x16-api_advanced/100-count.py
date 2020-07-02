@@ -42,6 +42,8 @@ def count_words(subreddit, word_list):
     Returns: OrderedDict with keys as keywords and occurrences as values or
     None on request failure
     """
+    if subreddit is None or word_list is None:
+        return None
     hot_list = fill_list(subreddit)
     if hot_list is None:
         return None

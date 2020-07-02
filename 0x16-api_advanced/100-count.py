@@ -54,7 +54,7 @@ def count_words(subreddit, word_list):
         word_l = word.lower()
         if all_cnt[word_l] > 0:
             if word in filtered_cnt:
-                filtered_cnt[word] += all_cnt[word_l]
+                filtered_cnt[word] += filtered_cnt[word]
             else:
                 filtered_cnt[word] = all_cnt[word_l]
     for k, v in sorted(filtered_cnt.items(),
